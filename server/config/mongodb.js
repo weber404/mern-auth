@@ -1,13 +1,23 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
 
 const connectDB = async () => {
+  if (cached.conn) return cached.conn;
 
-    mongoose.connection.on('connected', () => {
-        console.log('Database connected');
-    });
- 
-    await mongoose.connect(`${process.env.MONGODB_URI}/mern-auth`); 
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(process.env.MONGODB_URI + "/mern-auth", {
+      bufferCommands: false,
+    }).then((mongooseInstance) => mongooseInstance);
+  }
 
-}
+  cached.conn = await cached.promise;
+  console.log("Database connected");
+  return cached.conn;
+};
 
 export default connectDB;
