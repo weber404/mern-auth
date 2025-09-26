@@ -23,10 +23,10 @@ const allowedOrigins = [
   'https://mern-auth-client-sigma.vercel.app'
 ]
 
-
+app.use(cors({origin: allowedOrigins, credentials: true}));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: allowedOrigins, credentials: true}));
+
 
 
 // API Endpoints
