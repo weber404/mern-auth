@@ -18,7 +18,10 @@ app.use(async (req, res, next) => {
 
 
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://mern-auth-client-sigma.vercel.app/'
+]
 
 
 app.use(express.json());
