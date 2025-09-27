@@ -42,17 +42,52 @@ const Navbar = () => {
     }
 
   return (
+      //Menu for Mobile
+      <div
+  className="w-8 h-8 flex justify-center items-center rounded-full bg-black text-white
+  relative group cursor-pointer"
+  onClick={() => {
+    if (window.innerWidth < 640) {
+      setMenuOpen((prev) => !prev);
+    }
+  }}
+>
+  {userData.name[0].toUpperCase()}
+
+  <div
+    className={`
+      absolute top-0 right-0 z-10 text-black rounded pt-10
+      ${menuOpen ? "block" : "hidden"} 
+      sm:hidden
+    `}
+  >
+    <ul className="list-none m-0 p-2 bg-gray-100 text-sm">
+      {!userData.isAccountVerified && (
+        <li
+          onClick={sendVerificationOtp}
+          className="py-1 px-2 hover:bg-gray-200 cursor-pointer"
+        >
+          Verify email
+        </li>
+      )}
+      <li
+        onClick={logout}
+        className="py-1 px-2 hover:bg-gray-200 cursor-pointer pr-10"
+      >
+        Logout
+      </li>
+    </ul>
+  </div>
+
+
+      
+      //Menu for Desktop
     <div className='w-full flex justify-between items-center p-4 sm:p-6 sm:px-24 absolute top-0'>
 
       <img src={assets.logo} alt='' className='w-28 sm:w-32'/>
       {userData ?
       <div className='w-8 h-8 flex justify-center items-center rounded-full bg-black text-white
-      relative group'
-          onClick={() => {
-    if (window.innerWidth < 640) { // Tailwind’s `sm` breakpoint is 640px
-      setMenuOpen((prev) => !prev);
-    }
-  }}>
+      relative group'>
             {userData.name[0].toUpperCase()}
             <div className='absolute hidden group-hover:block top-0 right-0
             z-10 text-black rounded pt-10 '>
