@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>MERN - Auth (Authentication System)</h1>
+<h1>MERN - Authentication System</h1>
 
 <p><i>Secure, Seamless Authentication Powering Innovation</i></p>
 
@@ -110,4 +110,4 @@ Using npm:
 npm test
 ```
 
-[⬆️ Return](#mern-auth)
+[⬆️ Return](#mern---authentication-system)
