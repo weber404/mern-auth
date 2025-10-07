@@ -110,4 +110,4 @@ Using npm:
 npm test
 ```
 
-[⬆️ Return](#mern-auth)
+[⬆️ Return](#mern-authentication-system)
