@@ -52,3 +52,62 @@
 
 This project simplifies the implementation of secure user registration, login, email verification, and password reset flows. It covers all the essential user authentication features that modern web apps need from sign-up to password reset with a clean and structured flow. The core features include:
 
+- 🧩 **Modular Architecture:** Clear separation of frontend and backend components for maintainability.
+- ⚡ **Modern Frontend Setup:** Fast development with Vite, TailwindCSS, and React Fast Refresh.
+- 🔒 **Secure Authentication & Authorization:** JWT-based sessions, email verification, and password reset workflows
+- 💳 **Email Integration:** Automated email templates for verification and recovery.
+- 🚀 **SPA Routing:** Seamless navigation with URL rewriting on Vercel.
+- 🛠️ **State Mangement** Centralized React context for user auth and profile data.
+
+## Getting Started
+
+### Prerequisites
+
+This project requires the following dependencies:
+
+- **Programming Language:** JavaScript  
+- **Package Manager:** Npm  
+
+---
+
+### Installation
+
+Build **mern-auth** from the source and install dependencies:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/weber404/mern-auth
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd mern-auth
+
+3. **Install the dependencies:**
+ 
+   Using npm:
+   ```bash
+    npm install
+  
+---
+
+### Usage
+
+   Run the project with:
+
+   Using npm:
+   ```bash
+   npm start
+  ```
+
+### Testing
+
+Mern-auth uses the {**test_framework**} test framework. Run the test suite with:
+
+Using npm:
+```bash
+npm test
+```
+
+[⬆️ Return](#mern-auth)
